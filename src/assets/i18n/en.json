@@ -1,0 +1,12 @@
+{
+	"APP" : {
+		"NAME" : "myApp"
+	},
+	"GENERAL" : {
+		"USERNAME" : "Usuario",
+		"PASSWORD" : "Contraseña",
+	},
+	"LOGIN" : {
+		"LOG_IN" : "Iniciar sesion"
+	}
+}
