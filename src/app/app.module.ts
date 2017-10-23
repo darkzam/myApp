@@ -1,33 +1,21 @@
-/**
- * Ionic and Angular components
- */
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
-import { HttpClient, HttpClientModule } from '@angular/common/http'
 
-/**
- * Dependencies
- */
+import { HttpClient, HttpClientModule } from '@angular/common/http'
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
-/**
- * Pages in here
- */
 import { MyApp } from './app.component';
 import { TabsPage } from '../pages/tabs/tabs';
 import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import { UsuarioProvider } from '../providers/usuario/usuario';
 
-/**
- * i18n
- */
 export function createTranslateLoader(http: HttpClient){
-  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+  return new TranslateHttpLoader(http);
 }
 
 @NgModule({
@@ -43,7 +31,7 @@ export function createTranslateLoader(http: HttpClient){
     TranslateModule.forRoot({
       loader : {
         provide : TranslateLoader,
-        useFactory : (createTranslateLoader),
+        useFactory : createTranslateLoader,
         deps : [HttpClient]
       }
     }),

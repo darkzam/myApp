@@ -2,6 +2,10 @@
 	"APP" : {
 		"NAME" : "myApp"
 	},
+	"TABS" : {
+		"HOME" : "Start",
+		"SIGN_IN" : "Log in"
+	},
 	"GENERAL" : {
 		"USERNAME" : "Usuario",
 		"PASSWORD" : "Contraseña",
